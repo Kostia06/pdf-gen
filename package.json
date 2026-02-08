@@ -1,0 +1,66 @@
+{
+  "name": "@kos/pdf-gen",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Template-based PDF generation for browser and Node.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./client": {
+      "import": "./dist/client/index.esm.js",
+      "require": "./dist/client/index.js",
+      "types": "./dist/client/index.d.ts"
+    },
+    "./server": {
+      "import": "./dist/server/index.esm.js",
+      "require": "./dist/server/index.js",
+      "types": "./dist/server/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "vitest",
+    "lint": "eslint src/",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.8.1",
+    "puppeteer": "^21.0.0"
+  },
+  "peerDependenciesMeta": {
+    "puppeteer": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-commonjs": "^28.0.0",
+    "@types/node": "^22.0.0",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.8.1",
+    "puppeteer": "^24.0.0",
+    "rollup": "^4.0.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.0"
+  },
+  "keywords": [
+    "pdf",
+    "generator",
+    "template",
+    "jspdf",
+    "puppeteer",
+    "invoice",
+    "document"
+  ],
+  "author": "Kostiantyn Ilnytskyi",
+  "license": "MIT"
+}
