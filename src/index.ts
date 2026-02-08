@@ -82,7 +82,6 @@ export const pdf = new PDFGenerator();
 
 // Re-export everything
 export * from './types';
-export * from './templates';
 export * from './components';
 export { formatCurrency, formatDate } from './utils/format';
 export { defaultColors } from './utils/colors';
